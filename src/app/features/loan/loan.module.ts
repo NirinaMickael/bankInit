@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoanCreateComponent } from '../loan-create/loan-create.component';
-import { LoanListComponent } from '../loan-list/loan-list.component';
+import { LoanCreateComponent } from './loan-create/loan-create.component';
+import { LoanListComponent } from './loan-list/loan-list.component';
 
 
 

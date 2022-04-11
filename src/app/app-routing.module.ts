@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoanCreateComponent } from './features/loan-create/loan-create.component';
+import { LoanCreateComponent } from './features/loan/loan-create/loan-create.component';
 import { PageLayoutComponent } from './pages/page-layout/page-layout.component';
 
 const routes: Routes = [
