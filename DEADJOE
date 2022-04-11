@@ -1,0 +1,16 @@
+
+*** These modified files were found in JOE when it aborted on Mon Apr 11 17:37:14 2022
+*** JOE was aborted by UNIX signal 1
+
+*** File '* Build Log *'
+:q
+
+*** File '(Unnamed)'
+/home/misa/bankInit/.git/COMMIT_EDITMSG
+* Build Log *
+
+*** File '* Startup Log *'
+Processing '/etc/joe/editorrc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc
