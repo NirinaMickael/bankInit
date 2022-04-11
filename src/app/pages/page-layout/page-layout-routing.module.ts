@@ -4,7 +4,8 @@ const routes: Routes = [
   {
         path:'loan',
         loadChildren: () => import('../page-loan/page-loan.module').then(m=>m.PageLoanModule)
-  }
+  },
+  
 ];
 
 @NgModule({
