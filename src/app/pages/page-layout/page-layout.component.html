@@ -1,20 +1,22 @@
-<app-header></app-header>
-<!--Mettre dans la page loan un breadcrumb accueil/enregistrement d'un pret-->
-<div class="container-breadcrumb">
-    <nav aria-label="breadcrumb" class="container-list">
-        <ol class="breadcrumb">
-            <li class="Breadcrumb-item" routerLinkActive="active" routerLink="list">Accueil</li>
-            <li class="Breadcrumb-item" routerLinkActive="active" routerLink="create">Enregistrements</li>
-        </ol>
-    </nav>
+<div class="dashboard">
+    <app-header></app-header>
+    <!--Mettre dans la page loan un breadcrumb accueil/enregistrement d'un pret-->
+    <div class="container-breadcrumb">
+        <nav aria-label="breadcrumb" class="container-list">
+            <ol class="breadcrumb">
+                <li class="Breadcrumb-item" routerLinkActive="active" routerLink="list">Accueil</li>
+                <li class="Breadcrumb-item" routerLinkActive="active" routerLink="create">Enregistrements</li>
+            </ol>
+        </nav>
     <!--faire de meme pour toutes les pages listées dans le sidemenu-->
-    <nav aria-label="breadcrumb" class="container-list">
-        <ol class="breadcrumb">
-            <li class="Breadcrumb-item" routerLinkActive="active" routerLink="">Liste des prêts</li>
-            <li class="Breadcrumb-item" routerLinkActive="active" routerLink="">Enregistrer un nouveau prêt</li>
-            <li class="Breadcrumb-item" routerLinkActive="active" routerLink="">Calendrier de remboursement</li>
-            <li class="Breadcrumb-item" routerLinkActive="active" routerLink="">Dashboard</li>
-        </ol>
-    </nav>
+        <nav aria-label="breadcrumb" class="container-list">
+            <ol class="breadcrumb">
+                <li class="Breadcrumb-item" routerLinkActive="active" routerLink="">Liste des prêts</li>
+                <li class="Breadcrumb-item" routerLinkActive="active" routerLink="">Enregistrer un nouveau prêt</li>
+                <li class="Breadcrumb-item" routerLinkActive="active" routerLink="">Calendrier de remboursement</li>
+                <li class="Breadcrumb-item" routerLinkActive="active" routerLink="">Dashboard</li>
+            </ol>
+        </nav>
+    </div>
 </div>
 <router-outlet></router-outlet>
