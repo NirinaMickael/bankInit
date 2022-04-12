@@ -6,8 +6,6 @@
   styleUrls: ['./page-layout.component.scss']
 })
 export class PageLayoutComponent implements OnInit {
-  accueilIsActive:boolean = true;
-  enregistrementsIsActive:boolean = false;
   constructor() { }
 
   ngOnInit(): void {

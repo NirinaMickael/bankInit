@@ -5,8 +5,7 @@ import { PageLayoutRoutingModule } from './page-layout-routing.module';
 import { PageLayoutComponent } from './page-layout.component';
 import { HeaderComponent } from 'src/app/features/header/header.component';
 import { LoanModule } from 'src/app/features/loan/loan.module';
-
-
+import { PageLoanModule } from '../page-loan/page-loan.module';
 @NgModule({
   declarations: [
     PageLayoutComponent,
@@ -16,6 +15,7 @@ import { LoanModule } from 'src/app/features/loan/loan.module';
     CommonModule,
     PageLayoutRoutingModule,
     LoanModule,
+    PageLoanModule
   ]
 })
 export class PageLayoutModule { }
