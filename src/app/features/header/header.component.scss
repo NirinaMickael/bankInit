@@ -1,0 +1,33 @@
+.container-dropdown{
+    width: 100%;
+    box-shadow: 2px  2px 1px #8b8686cb;
+    position: absolute;
+    z-index: 2;
+    display:flex;
+    justify-content: flex-end;
+    li,button{
+        font-size: var(--size-text);
+    }
+    .dropdown {
+        width:20vw;
+        margin: 0.5em 2em;
+        .active{
+            background-color:var(--primary-color);
+        }
+        .dropdown-item{
+            &:hover{
+                background-color: var(--secondary-color);
+            }
+        }
+       .btn {
+          width: 100%;
+            .users-gear{
+                width:25%;
+                margin-right: 1em;
+            }
+       }
+       .dropdown-menu {
+           width: 100%;
+       }
+    }
+}
