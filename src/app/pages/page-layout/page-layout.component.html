@@ -1,2 +1,18 @@
 <app-header></app-header>
+<!--Mettre dans la page loan un breadcrumb accueil/enregistrement d'un pret-->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" routerLinkActive="active" routerLink="">Accueil</li>
+        <li class="breadcrumb-item" routerLinkActive="active" routerLink="">Enregistrements</li>
+    </ol>
+</nav>
+<!--faire de meme pour toutes les pages listées dans le sidemenu-->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" routerLinkActive="active" routerLink="">Liste des prêts</li>
+        <li class="breadcrumb-item" routerLinkActive="active" routerLink="">Enregistrer un nouveau prêt</li>
+        <li class="breadcrumb-item" routerLinkActive="active" routerLink="">Calendrier de remboursement</li>
+        <li class="breadcrumb-item" routerLinkActive="active" routerLink="">Dashboard</li>
+    </ol>
+</nav>
 <router-outlet></router-outlet>

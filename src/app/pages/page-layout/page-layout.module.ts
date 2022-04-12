@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { PageLayoutRoutingModule } from './page-layout-routing.module';
 import { PageLayoutComponent } from './page-layout.component';
 import { HeaderComponent } from 'src/app/features/header/header.component';
-import { LoanListComponent } from 'src/app/features/loan-list/loan-list.component';
-import { LoanCreateComponent } from 'src/app/features/loan-create/loan-create.component';
 import { LoanModule } from 'src/app/features/loan/loan.module';
 
 
@@ -17,7 +15,7 @@ import { LoanModule } from 'src/app/features/loan/loan.module';
   imports: [
     CommonModule,
     PageLayoutRoutingModule,
-    LoanModule
+    LoanModule,
   ]
 })
 export class PageLayoutModule { }
