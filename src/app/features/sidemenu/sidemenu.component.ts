@@ -11,8 +11,9 @@ export class SidemenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  myfunction(){
-    alert("Voulez-vous faire un prêt?")
+  handleclick(event:Event){
+    event.preventDefault();
+    console.log(event.target);
   }
 }
  
