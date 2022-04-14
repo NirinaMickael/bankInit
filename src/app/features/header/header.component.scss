@@ -1,10 +1,12 @@
 .container-dropdown{
     width: 100%;
     box-shadow: 2px  2px 1px #8b8686cb;
-    position: absolute;
-    z-index: 2;
+    // position: absolute;
+    // z-index: 2;
     display:flex;
     justify-content: flex-end;
+    grid-column: 2/3;
+    grid-row: 1/2;
     li,button{
         font-size: var(--size-text);
     }
