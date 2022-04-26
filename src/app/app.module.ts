@@ -10,8 +10,7 @@ import { PageLayoutModule } from './pages/page-layout/page-layout.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    PageLayoutModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
