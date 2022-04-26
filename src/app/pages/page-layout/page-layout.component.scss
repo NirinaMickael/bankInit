@@ -1,6 +1,6 @@
 .dashboard{
     display: grid;
-    grid-template-rows: 20% 75%;
+    grid-template-rows: 20% 80%;
     grid-template-columns: 20% 75%;
     position: absolute;
     width: 100%;
@@ -8,32 +8,4 @@
     flex-direction: column;
     justify-content:space-between;
     align-content: space-between;
-}
-.container-breadcrumb{
-    color: var(--secondary-color);
-    grid-row:2/3;
-    grid-column: 2/3;
-    .active{
-        color: black;
-        background: var(--secondary-color);
-        transition: all 0.3s ease-in-out;
-    }
-    .container-list{
-        box-shadow: 1px 3px 2px #c9bfbf98;
-
-        li{
-            cursor: pointer;
-            font-size: var(--size-para);
-            padding: .5em ;
-            margin: .5em;
-            border-radius: .5em;
-        }
-        width: max-content;
-        font-weight: bold;
-    }
-    .Breadcrumb-item{
-        margin-left: 10px;
-        
-    }
-    
 }
