@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UrlActiveService } from 'src/app/service/url-active.service';
+import { UrlActiveService } from 'src/app/core/services/url-active.service';
 
 @Component({
   selector: 'app-sidemenu',

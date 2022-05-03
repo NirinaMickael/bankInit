@@ -1,0 +1,19 @@
+.container-not-found{
+    width: 50%;
+    margin: auto;
+    .error-text{
+        font-size: 8em;
+        text-align: center;
+    }
+    h1{
+        font-size: 3em;
+        text-align: center;
+    }
+    .error-text span{
+        font-size: 1em;
+        color:pink;
+    }
+    button{
+        justify-self: center;
+    }
+}
