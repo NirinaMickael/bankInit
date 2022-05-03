@@ -5,7 +5,6 @@ import { PageLayoutRoutingModule } from './page-layout-routing.module';
 import { PageLayoutComponent } from './page-layout.component';
 import { HeaderComponent } from 'src/app/features/header/header.component';
 import { LoanModule } from 'src/app/features/loan/loan.module';
-import { PageLoanModule } from '../page-loan/page-loan.module';
 import { SidemenuComponent } from 'src/app/features/sidemenu/sidemenu.component';
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import { SidemenuComponent } from 'src/app/features/sidemenu/sidemenu.component'
   imports: [
     CommonModule,
     PageLayoutRoutingModule,
-    LoanModule,
-    PageLoanModule
+    LoanModule
   ]
 })
 export class PageLayoutModule { }

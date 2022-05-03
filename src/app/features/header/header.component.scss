@@ -33,3 +33,10 @@
        }
     }
 }
+.container-breadcrumb{
+    margin-top: 5px;
+    cursor: pointer;
+    .breadcrumb-item:hover{
+        color: var(--secondary-color);
+    }
+}

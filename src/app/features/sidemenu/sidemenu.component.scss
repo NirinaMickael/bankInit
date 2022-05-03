@@ -1,11 +1,11 @@
 .container-sidemenu{
-    height: 100%;
     background: #111;
     opacity: 0.8;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10% 70%;
     align-content: space-around;
+    height: 100%;
     .header{
         display:flex;
         justify-content: center;
