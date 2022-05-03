@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoanCreateComponent } from './loan-create/loan-create.component';
 import { LoanListComponent } from './loan-list/loan-list.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { NotFoundComponent } from '../../shared/pages/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 
 
