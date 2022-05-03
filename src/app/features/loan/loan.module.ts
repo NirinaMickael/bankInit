@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoanCreateComponent } from './loan-create/loan-create.component';
 import { LoanListComponent } from './loan-list/loan-list.component';
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +11,9 @@ import { LoanListComponent } from './loan-list/loan-list.component';
     LoanListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports : [
     LoanCreateComponent,
