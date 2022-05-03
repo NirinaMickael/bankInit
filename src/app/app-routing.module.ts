@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageLayoutComponent } from './pages/page-layout/page-layout.component';
 
 const routes: Routes = [
+  
   {path:'', redirectTo:'pages', pathMatch:'full'},
   {
     path: 'pages',
