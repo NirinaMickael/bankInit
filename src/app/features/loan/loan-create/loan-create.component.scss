@@ -1,15 +1,16 @@
+@import '../../../shared/themes/styles/_variable.scss';
 .foot{
-    background-color:var(--primary-color);
+    background-color:$primary-color;
     input[type="submit"]{
-        color:var(--secondary-color);
+        color:$secondary-color;
         background-color: #212529;
-        border: solid var(--secondary-color) .4px;
+        border: solid $secondary-color .4px;
         border-radius:40px;
        
     }
 }
 .head{
-    background-color:var(--primary-color);
+    background-color:$primary-color;
 }
 .Container{
     border:solid rgb(214, 214, 214) .3px;

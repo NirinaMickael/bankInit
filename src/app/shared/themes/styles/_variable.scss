@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+$primary-color: #fad9e6;
+$secondary-color: #e4aec5;
+$third-color: #5f7464;
+$size-title: 30px;
+$size-subtitle: 20px;
+$size-para: 15px;
+.container-list {
+  box-sizing: border-box;
+  height: var($size-title);
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}

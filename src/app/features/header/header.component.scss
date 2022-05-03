@@ -1,3 +1,4 @@
+@import '../../shared/themes/styles/_variable.scss';
 .container-dropdown{
     width: 100%;
     box-shadow: 2px  2px 1px #8b8686cb;
@@ -8,17 +9,17 @@
     grid-column: 2/3;
     grid-row: 1/2;
     li,button{
-        font-size: var(--size-text);
+        font-size: $size-para;
     }
     .dropdown {
         width:20vw;
         margin: 0.5em 2em;
         .active{
-            background-color:var(--primary-color);
+            background-color:$primary-color;
         }
         .dropdown-item{
             &:hover{
-                background-color: var(--secondary-color);
+                background-color: $secondary-color;
             }
         }
        .btn {
@@ -37,6 +38,6 @@
     margin-top: 5px;
     cursor: pointer;
     .breadcrumb-item:hover{
-        color: var(--secondary-color);
+        color: $secondary-color;
     }
 }
