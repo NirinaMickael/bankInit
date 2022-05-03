@@ -17,4 +17,11 @@
         </ul>
       </div>
 </div>
-  
+<div class="container-breadcrumb">
+  <nav aria-label="breadcrumb" class="container-list">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" routerLink = "/pages" (click)="handleClick()">Accueil</li>
+        <li class="breadcrumb-item active" aria-current="page">{{routeActive}}</li>
+  </ol>
+  </nav>
+</div>

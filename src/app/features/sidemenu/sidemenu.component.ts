@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UrlActiveService } from 'src/app/service/url-active.service';
 
 @Component({
   selector: 'app-sidemenu',
@@ -7,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidemenuComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private urlactive:UrlActiveService) { }
+  
   ngOnInit(): void {
   }
   handleclick(event:Event){
     event.preventDefault();
-    console.log(event.target);
+    this.urlactive.active$.next((event.currentTarget as HTMLElement).innerHTML);
   }
 }
  

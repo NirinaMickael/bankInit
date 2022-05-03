@@ -10,8 +10,5 @@ export class PageLayoutComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  handlerClick(){
-
-  }
 
 }
