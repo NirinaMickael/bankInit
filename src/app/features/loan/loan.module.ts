@@ -5,6 +5,7 @@ import { LoanListComponent } from './loan-list/loan-list.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NotFoundComponent } from '../../shared/pages/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   exports : [
     LoanCreateComponent,
