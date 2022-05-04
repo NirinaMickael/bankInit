@@ -1,4 +1,8 @@
-<table class="table table-striped">
+<div class="container-list">
+  <div class="search-field">
+      <input type="search" name="search" id="search">
+  </div>
+  <table class="table table-striped">
     <thead>
       <tr>
         <th scope="col">ACTION</th>
@@ -13,7 +17,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let items of loanList ; let i = index" [ngStyle]="{'display': showList(i,pos)? '':'none'}">
-        <th scope="row">1</th>
+        <th scope="row"><fa-icon [icon]="filmIcon"></fa-icon></th>
           <td>{{items.client}}</td>
           <td>{{items.dateDuPret}}</td>
           <td>{{items.finDuContrat}}</td>
@@ -46,3 +50,4 @@
       </li>
     </ul>
   </nav>
+</div>

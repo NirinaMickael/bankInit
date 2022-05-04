@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import { List } from 'src/app/core/models/list';
 import { Loan } from 'src/app/core/models/loan';
-
 @Component({
   selector: 'app-loan-list',
   templateUrl: './loan-list.component.html',
@@ -11,6 +11,7 @@ export class LoanListComponent implements OnInit {
   pos: number = 0;
   loanList: Loan[] = List;
   header = ["client","dateDuPret"];
+  filmIcon = faFilm;
   constructor() {}
 
   ngOnInit(): void {}

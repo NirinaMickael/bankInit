@@ -1,5 +1,7 @@
-@import '../../../../styles.scss';
-
+@import '../../../shared/themes/styles/_variable.scss';
+input,th,td{
+    font-weight: normal;
+}
 thead,tbody,tr,td,th{
     border: none;
 }
@@ -9,9 +11,29 @@ thead,tbody,tr,td,th{
 }
 
 thead {
-    box-shadow: 2px 4px 5px var(--secondary-color);
+    box-shadow: 2px 4px 5px $secondary-color;
 }
-
-nav {
-    
+td,th{
+    padding-top: 3%;
+}
+.container-list{
+    display: grid;
+    grid-template-rows: 10% 70% 10%;
+    grid-template-columns: 97%;
+    justify-content: center;
+    align-content: space-around;
+    height: 90%;
+    .search-field {
+        justify-self: end;
+        margin: 20px;
+        input {
+            border-radius: 10px;
+            outline: none;
+            font-size: $size-para;
+            padding: .5em;
+        }
+    }
+    nav{
+        justify-self: center;   
+    }
 }
