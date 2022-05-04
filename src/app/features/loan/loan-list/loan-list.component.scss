@@ -1,0 +1,17 @@
+@import '../../../../styles.scss';
+
+thead,tbody,tr,td,th{
+    border: none;
+}
+
+* {
+    box-sizing : border-box; 
+}
+
+thead {
+    box-shadow: 2px 4px 5px var(--secondary-color);
+}
+
+nav {
+    
+}
