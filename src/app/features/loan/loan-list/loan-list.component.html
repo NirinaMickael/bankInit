@@ -1,6 +1,12 @@
 <div class="container-list">
   <div class="search-field">
-      <input type="search" name="search" id="search">
+    <input
+      type="search"
+      name="search"
+      id="search"
+      placeholder="Search..."
+      #input
+    />
   </div>
   <table class="table table-striped">
     <thead>
@@ -16,37 +22,135 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let items of loanList ; let i = index" [ngStyle]="{'display': showList(i,pos)? '':'none'}">
-        <th scope="row"><fa-icon [icon]="filmIcon"></fa-icon></th>
-          <td>{{items.client}}</td>
-          <td>{{items.dateDuPret}}</td>
-          <td>{{items.finDuContrat}}</td>
-          <td>{{items.montantInteret}}</td>
-          <td>{{items.montantPret}}</td>
-          <td>{{items.pourcentage}}</td>
-          <td>{{items.modeDePaiement}}</td>
-      </tr>
+      <ng-container *ngIf="!isTyping">
+        <tr
+          *ngFor="let items of loanList; let i = index"
+          [ngClass]="{ showList: showList(i, pos) }"
+        >
+          <th scope="row" class="action-icon">
+            <fa-icon [icon]="EyeIcon"></fa-icon>
+            <fa-icon [icon]="EditIcon"></fa-icon>
+          </th>
+          <td>{{ items.client }}</td>
+          <td>{{ items.montantPret }}</td>
+          <td>{{ items.dateDuPret }}</td>
+          <td>{{ items.finDuContrat }}</td>
+          <td>{{ items.montantInteret }}</td>
+          <td>{{ items.pourcentage }}</td>
+          <td>{{ items.modeDePaiement }}</td>
+        </tr>
+      </ng-container>
+      <ng-container *ngIf="isTyping">
+        <tr
+          *ngFor="let items of listOfLoanSearch; let i = index"
+          [ngClass]="{ showList: showList(i, pos) }"
+        >
+          <th scope="row" class="action-icon">
+            <fa-icon [icon]="EyeIcon"></fa-icon>
+            <fa-icon [icon]="EditIcon"></fa-icon>
+          </th>
+          <td>{{ items.client }}</td>
+          <td>{{ items.montantPret }}</td>
+          <td>{{ items.dateDuPret }}</td>
+          <td>{{ items.finDuContrat }}</td>
+          <td>{{ items.montantInteret }}</td>
+          <td>{{ items.pourcentage }}</td>
+          <td>{{ items.modeDePaiement }}</td>
+        </tr>
+      </ng-container>
     </tbody>
   </table>
-  <nav aria-label="...">
+  <nav>
     <ul class="pagination">
       <li class="page-item">
-        <button class="page-link" (click)="handleClickButton($event)" [disabled]="pos<1" >Previous</button>
+        <button
+          class="page-link"
+          (click)="handleClickButton($event)"
+          [disabled]="pos < 1"
+          class="prev"
+        >
+          <fa-icon [icon]="prevIcon"></fa-icon>
+        </button>
       </li>
-      <li class="page-item active"><a class="page-link" (click)="handleClickNumber($event)">1</a></li>
-      <li class="page-item ">
-        <a class="page-link" (click)="handleClickNumber($event)">2 <span class="sr-only"></span></a>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 0 }"
+          (click)="handleClickNumber($event)"
+          >1</a
+        >
       </li>
-      <li class="page-item"><a class="page-link" (click)="handleClickNumber($event)">3</a></li>
-      <li class="page-item"><a class="page-link" (click)="handleClickNumber($event)">4</a></li>
-      <li class="page-item"><a class="page-link" (click)="handleClickNumber($event)">5</a></li>
-      <li class="page-item"><a class="page-link" (click)="handleClickNumber($event)">6</a></li>
-      <li class="page-item"><a class="page-link" (click)="handleClickNumber($event)">7</a></li>
-      <li class="page-item"><a class="page-link" (click)="handleClickNumber($event)">8</a></li>
-      <li class="page-item"><a class="page-link" (click)="handleClickNumber($event)">9</a></li>
-      <li class="page-item"><a class="page-link" (click)="handleClickNumber($event)">10</a></li>
-      <li class="page-item">
-        <button class="page-link"  (click)="handleClickButton($event)" [disabled]="pos>8" >Next</button>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 1 }"
+          (click)="handleClickNumber($event)"
+          >2 <span class="sr-only"></span
+        ></a>
+      </li>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 2 }"
+          (click)="handleClickNumber($event)"
+          >3</a
+        >
+      </li>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 3 }"
+          (click)="handleClickNumber($event)"
+          >4</a
+        >
+      </li>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 4 }"
+          (click)="handleClickNumber($event)"
+          >5</a
+        >
+      </li>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 5 }"
+          (click)="handleClickNumber($event)"
+          >6</a
+        >
+      </li>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 6 }"
+          (click)="handleClickNumber($event)"
+          >7</a
+        >
+      </li>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 7 }"
+          (click)="handleClickNumber($event)"
+          >8</a
+        >
+      </li>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 8 }"
+          (click)="handleClickNumber($event)"
+          >9</a
+        >
+      </li>
+      <li [ngClass]="{ 'page-item': true }">
+        <a
+          [ngClass]="{ 'page-link': true, Active: pos == 9 }"
+          (click)="handleClickNumber($event)"
+          >10</a
+        >
+      </li>
+      <li [ngClass]="{ 'page-item': true }">
+        <button
+          class="page-link"
+          (click)="handleClickButton($event)"
+          [disabled]="pos > 8"
+          class="next"
+        >
+          <fa-icon [icon]="nextIcon"></fa-icon>
+        </button>
       </li>
     </ul>
   </nav>

@@ -23,7 +23,7 @@
             padding-top: .8em;
         }
     }
-    .sidemenu{
+    .sidemenu-link{
         display: flex;
         flex-direction: column;
         overflow-y: auto;
@@ -45,4 +45,6 @@
         }
     }
 }
-    
+.activeLink{
+    background: $secondary-color;
+}    

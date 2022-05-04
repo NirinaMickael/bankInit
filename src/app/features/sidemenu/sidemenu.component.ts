@@ -8,14 +8,18 @@ import { UrlActiveService } from 'src/app/core/services/url-active.service';
   styleUrls: ['./sidemenu.component.scss']
 })
 export class SidemenuComponent implements OnInit {
-
-  constructor(private urlactive:UrlActiveService) { }
+  routeActive !: string; 
+  constructor(private urlactive:UrlActiveService,private route : Router) { }
   
   ngOnInit(): void {
   }
   handleclick(event:Event){
     event.preventDefault();
-    this.urlactive.active$.next((event.currentTarget as HTMLElement).innerHTML);
+    const linkItem = (event.currentTarget as HTMLElement);
+    // linkItem.classList.toggle('activeLink')
+    // console.log(this.route)
+    this.urlactive.active$.next(linkItem.innerHTML); 
+    this.urlactive.active$.subscribe(data=>this.routeActive=data)
   }
 }
  
