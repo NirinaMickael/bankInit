@@ -6,7 +6,6 @@
   styleUrls: ['./page-layout.component.scss']
 })
 export class PageLayoutComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

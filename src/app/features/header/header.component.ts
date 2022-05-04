@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UrlActiveService } from 'src/app/core/services/url-active.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  routeActive = "";
+  constructor(private urlactive : UrlActiveService) {
   }
 
+  ngOnInit(): void {
+    this.urlactive.active$.subscribe(data=>{
+      this.routeActive = data;
+    })
+  }
+  handleClick(){
+    this.routeActive = "";
+  }
 }

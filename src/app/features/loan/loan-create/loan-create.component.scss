@@ -1,0 +1,24 @@
+@import '../../../shared/themes/styles/_variable.scss';
+.foot{
+    background-color:$primary-color;
+    input[type="submit"]{
+        color:$secondary-color;
+        background-color: #212529;
+        border: solid $secondary-color .4px;
+        border-radius:40px;
+       
+    }
+}
+.head{
+    background-color:$primary-color;
+}
+.Container{
+    border:solid rgb(214, 214, 214) .3px;
+    box-shadow: -1px -1px 2px rgba($color:#111, $alpha:0.3);
+    padding:15px;
+    &:hover{
+        box-shadow: -6px -2px 17px 5px rgba(228,174,197,0.3);
+    }
+    width:95%;
+    margin:auto;
+}

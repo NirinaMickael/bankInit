@@ -1,0 +1,14 @@
+<div class="container-sidemenu">
+    <div class="header">
+        <img class="logo-icon" src="../../../assets/icons/4698577_banking_cash_money_payment_wallet_icon.svg" alt="no icon" srcset="" class="open-icon">
+        <h1>Bank Init</h1>        
+    </div>
+    <nav class="sidemenu-link">
+        <!--button (click)="myfunction()">Liste de prêts</button>-->
+        <a routerLink="loan/*" [ngClass]="{'activeLink':routeActive=='Dashboard'}">Dashboard</a>
+        <a routerLink="loan/list"  (click)="handleclick($event)" [ngClass]="{'activeLink':routeActive=='Liste de prêts'}">Liste de prêts</a>
+        <a routerLink="loan/create"(click)="handleclick($event)" [ngClass]="{'activeLink':routeActive=='Enregistrer un nouveau prêt'}">Enregistrer un nouveau prêt</a>
+        <a routerLink="loan/*" [ngClass]="{'activeLink':routeActive=='Calendrier de remboursement'}">Calendrier de remboursement</a>
+    </nav>
+</div>    
+

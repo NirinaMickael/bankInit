@@ -1,0 +1,43 @@
+@import '../../shared/themes/styles/_variable.scss';
+.container-dropdown{
+    width: 100%;
+    box-shadow: 2px  2px 1px #8b8686cb;
+    // position: absolute;
+    // z-index: 2;
+    display:flex;
+    justify-content: flex-end;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    li,button{
+        font-size: $size-para;
+    }
+    .dropdown {
+        width:20vw;
+        margin: 0.5em 2em;
+        .active{
+            background-color:$primary-color;
+        }
+        .dropdown-item{
+            &:hover{
+                background-color: $secondary-color;
+            }
+        }
+       .btn {
+          width: 100%;
+            .users-gear{
+                width:25%;
+                margin-right: 1em;
+            }
+       }
+       .dropdown-menu {
+           width: 100%;
+       }
+    }
+}
+.container-breadcrumb{
+    margin-top: 5px;
+    cursor: pointer;
+    .breadcrumb-item:hover{
+        color: $secondary-color;
+    }
+}
