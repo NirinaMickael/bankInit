@@ -1,69 +1,137 @@
 <div class="Container p-0">
-    <form method="POST" [formGroup]="formgroup" (submit)="handleSubmit(formgroup)">
-        <div class="head border-bottom p-2">
-            <h3>Formulaire de saisie d'un prêt</h3>
+  <form
+    method="POST"
+    [formGroup]="formgroup"
+    (submit)="handleSubmit(formgroup)"
+  >
+    <div class="head border-bottom p-2">
+      <h3>Formulaire de saisie d'un prêt</h3>
+    </div>
+    <div class="body m-2 mt-4">
+      <div class="row mb-2">
+        <div class="col-md-4">
+          <label for="responsible" class="form-label">responsible</label>
+          <select
+            name="responsible"
+            class="form-select"
+            id="responsible"
+            formControlName="responsible"
+          >
+            <option></option>
+            <option *ngFor="let resp of responsibles; let i = index">
+              {{ resp.firstName }} {{ resp.lastName }}
+            </option>
+          </select>
         </div>
-        <div class="body m-2 mt-4">
-            <div class="row mb-2">
-                <div class="col-md-4">
-                    <label for="responsable" class="form-label">Responsable</label>
-                    <select name="responsable" class="form-select" id="responsable" formControlName="responsable" #responsable>
-                        <option></option>
-                        <option *ngFor="let resp of responsibles; let i = index">{{resp.firstName}} {{resp.lastName}}</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <label for="montant" class="form-label">Montant prêt</label>
-                    <div class="input-group">
-                        <span class="input-group-text">Ar</span>
-                        <input type="number" name="montant" id="montant" placeholder="Montant prêt" class="form-control" formControlName="montantPret" #montantPret>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <label for="pourcentage" class="form-label">Pourcentage</label>
-                    <input type="number" name="pourcentage" id="pourcentage" placeholder="0%" class="form-control" formControlName="pourcentage" #pourcentage>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="date-pret" class="form-label">Date du prêt</label>
-                    <input type="date" class="form-control" name="date-pret" id="date-pret" placeholder="dd/mm/yy" formControlName="datePret" #datePret>
-                </div>
-                <div class="col-md-6">
-                    <label for="date-fin-remboursement" class="form-label">Date fin remboursement</label>
-                    <input type="date" class="form-control" name="date-fin-remboursement" id="date-fin-remboursement"
-                        placeholder="dd/mm/yy" formControlName="dateFinPret" #dateFinPret>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="mode-remboursement" class="form-label">Mode de remboursement</label>
-                    <select name="mode-remboursement" id="mode-remoursement" class="form-select" formControlName="modeRemboursement" #modeRemboursement>
-                        <option value="Mensuel">Mensuel</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label for="mode-payement" class="form-label">Mode de payement capital</label>
-                    <select name="mode-remboursement" id="mode-remoursement" class="form-select" formControlName="modePayementCapital" #modePayementCapital>
-                        <option></option>
-                        <option *ngFor="let pay of paymentMethodes">{{pay.label}}</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <label for="commentaire" class="form-label">Commentaire</label>
-                    <textarea name="commentaire" class="form-control" id="commentaire"  formControlName="commentaire"></textarea>
-                </div>
-                <div class="col-md-6">
-                    <label for="payement-interet" class="form-label">Mode de payement intérêt</label>
-                    <input type="text" name="payement-interet" class="form-control" id="payement-interet" formControlName="modePayementInteret">
-                </div>
-            </div>
-
+        <div class="col-md-4">
+          <label for="montant" class="form-label">Montant prêt</label>
+          <div class="input-group">
+            <span class="input-group-text">Ar</span>
+            <input
+              type="number"
+              name="montant"
+              id="montant"
+              placeholder="Montant prêt"
+              class="form-control"
+              formControlName="montantPret"
+              #montantPret
+            />
+          </div>
         </div>
-        <div class="foot border-top d-flex flex-row-reverse m-0 p-2">
-            <input type="submit" value="Enregistrer" class="btn m-0">
+        <div class="col-md-4">
+          <label for="percentage" class="form-label">pourcentage</label>
+          <input
+            type="number"
+            name="percentage"
+            id="percentage"
+            placeholder="0%"
+            class="form-control"
+            formControlName="percentage"
+          />
         </div>
-    </form>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="loanDate" class="form-label">Date du prêt</label>
+          <input
+            type="date"
+            class="form-control"
+            name="loanDate"
+            id="loanDate"
+            placeholder="dd/mm/yy"
+            formControlName="loanDate"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="repaymentEndDatet" class="form-label"
+            >Date fin remboursement</label
+          >
+          <input
+            type="date"
+            class="form-control"
+            name="repaymentEndDatet"
+            id="repaymentEndDatet"
+            placeholder="dd/mm/yy"
+            formControlName="repaymentEndDate"
+          />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="mode-remboursement" class="form-label"
+            >Mode de remboursement</label
+          >
+          <select
+            name="mode-remboursement"
+            id="mode-remoursement"
+            class="form-select"
+            formControlName="modeRemboursement"
+            #modeRemboursement
+          >
+            <option value="Mensuel">Mensuel</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="capitalPayementMethod" class="form-label"
+            >Mode de payement capital</label
+          >
+          <select
+            name="capitalPayementMethod"
+            id="capitalPayementMethod"
+            class="form-select"
+            formControlName="capitalPayementMethod"
+          >
+            <option></option>
+            <option *ngFor="let pay of paymentMethodes">{{ pay.label }}</option>
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="remark" class="form-label">Commentaire</label>
+          <textarea
+            name="remark"
+            class="form-control"
+            id="remark"
+            formControlName="remark"
+          ></textarea>
+        </div>
+        <div class="col-md-6">
+          <label for="benefitPaymentMethod" class="form-label"
+            >Mode de payement intérêt</label
+          >
+          <input
+            type="text"
+            name="benefitPaymentMethod"
+            class="form-control"
+            id="benefitPaymentMethod"
+            formControlName="benefitPaymentMethod"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="foot border-top d-flex flex-row-reverse m-0 p-2">
+      <input type="submit" value="Enregistrer" class="btn m-0" />
+    </div>
+  </form>
 </div>
