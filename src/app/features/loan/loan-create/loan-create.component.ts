@@ -14,16 +14,16 @@ export class LoanCreateComponent implements OnInit {
   formgroup: FormGroup;
   constructor(private builder: FormBuilder, private loan: LoanService) {
     this.formgroup = this.builder.group({
-       'responsable':[],
-       'montantPret':[],
-       'pourcentage':[],
-       'datePret':[],
-       'dateFinRemboursement':[],
-       'dateFinPret':[],
-       'modeRemboursement':[],
-       'modePayementCapital':[],
-       'commentaire':[],
-       'modePayementInteret':[]
+      responsible: [''],
+      client:[''],
+      amount: [''],
+      percentage:[''],
+      repaymentFrequency:[''],
+      loanDate:[''],
+      repaymentEndDate:[''],
+      benefitPaymentMethod:[''],
+      capitalPayementMethod:[''],
+      remark:['']
     });
     this.loan.getPageCreateData().subscribe(data=>{
       this.responsibles = data.responsible;
