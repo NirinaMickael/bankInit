@@ -8,9 +8,8 @@
                 <div class="col-md-4">
                     <label for="responsable" class="form-label">Responsable</label>
                     <select name="responsable" class="form-select" id="responsable" formControlName="responsable" #responsable>
-                        <option value="agent1">Agent 1</option>
-                        <option value="agent2">Agent 2</option>
-                        <option value="agent3">Agent 3</option>
+                        <option></option>
+                        <option *ngFor="let resp of responsibles; let i = index">{{resp.firstName}} {{resp.lastName}}</option>
                     </select>
                 </div>
                 <div class="col-md-4">
@@ -46,10 +45,8 @@
                 <div class="col-md-6">
                     <label for="mode-payement" class="form-label">Mode de payement capital</label>
                     <select name="mode-remboursement" id="mode-remoursement" class="form-select" formControlName="modePayementCapital" #modePayementCapital>
-                        <option value="MVola">MVola</option>
-                        <option value="Orange-Money">Orange Money</option>
-                        <option value="Airtel Money">Airtel Money</option>
-                        <option value="Espece">Espèce</option>
+                        <option></option>
+                        <option *ngFor="let pay of paymentMethodes">{{pay.label}}</option>
                     </select>
                 </div>
             </div>

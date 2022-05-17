@@ -1,0 +1,33 @@
+{
+    "responsible":[
+        {
+            "id": 1,
+            "firstName": "Razafindratsima",
+            "lastName": "Ny Aina"
+        },
+        {
+            "id": 2,
+            "firstName": "Randriamanalina",
+            "lastName": "Atrika"
+        }
+    ],
+    "paymentMethods":[
+  
+        {
+            "id": 7,
+            "label": "Airtel Money"
+        },
+        {
+            "id": 8,
+            "label": "MVola"
+        },
+        {
+            "id": 9,
+            "label": "Orange Money"
+        },
+        {
+            "id": 10,
+            "label": "Espèce"
+        }
+    ]
+}
