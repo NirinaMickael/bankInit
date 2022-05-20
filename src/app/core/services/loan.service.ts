@@ -5,10 +5,15 @@ import retour_api_page_create_data from './../../features/loan/loan-create/retou
   providedIn: 'root'
 })
 export class LoanService {
-
-  constructor() { }
+  data$ = new BehaviorSubject<any>("");
+  constructor() { 
+  }
   getPageCreateData(): Observable<any>
   {
       return of(retour_api_page_create_data);
+  }
+  loanCreate(data:any): Observable<any>{
+    this.data$.next(data);
+    return of(data);
   }
 }
