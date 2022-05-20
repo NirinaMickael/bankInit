@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Responsible } from 'src/app/core/models/responsible';
 import { paymentMethod } from 'src/app/core/models/payment-method';
 import { LoanService } from 'src/app/core/services/loan.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-loan-create',
@@ -11,31 +12,33 @@ import { LoanService } from 'src/app/core/services/loan.service';
 })
 export class LoanCreateComponent implements OnInit {
   reimbursementMethod = ['Mensuel'];
-  formgroup: FormGroup;
-  constructor(private builder: FormBuilder, private loan: LoanService) {
-    this.formgroup = this.builder.group({
-      responsible: [''],
-      client:[''],
-      amount: [''],
-      percentage:[''],
-      repaymentFrequency:[''],
-      loanDate:[''],
-      repaymentEndDate:[''],
-      benefitPaymentMethod:[''],
-      capitalPayementMethod:[''],
-      remark:['']
-    });
-    this.loan.getPageCreateData().subscribe(data=>{
+  registerForm = this.builder.group({
+    responsible: ['', Validators.required],
+    client: ['', Validators.required],
+    amount: ['', Validators.required],
+    percentage: ['', Validators.required],
+    repaymentFrequency: ['', Validators.required],
+    loanDate: ['', Validators.required],
+    repaymentEndDate: ['', Validators.required],
+    benefitPaymentMethod: ['', Validators.required],
+    capitalPayementMethod: ['', Validators.required],
+    modeRemboursement: ['', Validators.required],
+    remark: ['']
+  });
+  responsibles: Responsible[] = [];
+  paymentMethodes: paymentMethod[] = [];
+  constructor(private builder: FormBuilder, private loan: LoanService ,private _route : Router) {
+  }
+  ngOnInit(): void {
+    this.loan.getPageCreateData().subscribe(data => {
       this.responsibles = data.responsible;
       this.paymentMethodes = data.paymentMethods;
     })
-   }
-  responsibles: Responsible[] = [];
-  paymentMethodes: paymentMethod[] = [];
-  ngOnInit(): void {
+    
   }
-  handleSubmit(formgroup:FormGroup){
-    console.log(formgroup)
+  handleSubmit() {
+   this.loan.loanCreate(this.registerForm.value).subscribe(data=>console.log(data));
+    this._route.navigate(['pages/loan/list']);
   }
 }
 
