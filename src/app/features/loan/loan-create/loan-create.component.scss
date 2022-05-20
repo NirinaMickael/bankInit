@@ -1,16 +1,20 @@
 @import '../../../shared/themes/styles/_variable.scss';
 .foot{
     background-color:$primary-color;
-    input[type="submit"]{
+    button{
         color:$secondary-color;
         background-color: #212529;
-        border: solid $secondary-color .4px;
         border-radius:40px;
-       
     }
 }
 .head{
     background-color:$primary-color;
+}
+div small{
+    color: #ff0a0a;
+}
+.invalid {
+    border: 1px solid #ff0a0a;
 }
 .Container{
     border:solid rgb(214, 214, 214) .3px;

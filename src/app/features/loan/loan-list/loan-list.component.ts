@@ -3,6 +3,7 @@ import { faEye ,faForward,faBackward, faEdit, faLeaf } from '@fortawesome/free-s
 import { BehaviorSubject, debounceTime, distinctUntilChanged, fromEvent, map } from 'rxjs';
 import { List } from 'src/app/core/models/list';
 import { Loan } from 'src/app/core/models/loan';
+import { LoanService } from 'src/app/core/services/loan.service';
 @Component({
   selector: 'app-loan-list',
   templateUrl: './loan-list.component.html',
@@ -17,8 +18,10 @@ export class LoanListComponent implements OnInit , AfterViewInit{
   EyeIcon = faEye;EditIcon = faEdit;nextIcon = faForward;prevIcon = faBackward;
   text$ = new BehaviorSubject<string>("")
   @ViewChild('input',{static:true}) input !: ElementRef;
-  constructor() {}
-  ngOnInit(): void {}
+  constructor(private loan: LoanService) {}
+  ngOnInit(): void {
+    this.loan.data$.subscribe(data=>console.log(data));
+  }
   ngAfterViewInit(): void {
     //  gerer l'observable d'input
     fromEvent(this.input.nativeElement,'input').pipe(
