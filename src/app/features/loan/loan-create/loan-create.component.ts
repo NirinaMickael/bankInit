@@ -14,10 +14,10 @@ export class LoanCreateComponent implements OnInit {
   reimbursementMethod = ['Mensuel'];
   registerForm = this.builder.group({
     responsible: ['', Validators.required],
-    client: ['', Validators.required],
+    client: ['Agent'],
     amount: ['', Validators.required],
     percentage: ['', Validators.required],
-    repaymentFrequency: ['', Validators.required],
+    repaymentFrequency: ['1'],
     loanDate: ['', Validators.required],
     repaymentEndDate: ['', Validators.required],
     benefitPaymentMethod: ['', Validators.required],
@@ -26,6 +26,7 @@ export class LoanCreateComponent implements OnInit {
     remark: ['']
   });
   responsibles: Responsible[] = [];
+  client = [{id:1,}]
   paymentMethodes: paymentMethod[] = [];
   constructor(private builder: FormBuilder, private loan: LoanService ,private _route : Router) {
   }
