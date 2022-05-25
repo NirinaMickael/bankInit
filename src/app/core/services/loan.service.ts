@@ -14,6 +14,7 @@ export class LoanService {
   }
   loanCreate(data:any): Observable<any>{
     this.data$.next(data);
+    //fghjkl
     return of(data);
   }
 }
