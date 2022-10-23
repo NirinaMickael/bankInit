@@ -38,8 +38,18 @@ export class LoanCreateComponent implements OnInit {
     
   }
   handleSubmit() {
-   this.loan.loanCreate(this.registerForm.value).subscribe(data=>console.log(data));
-    this._route.navigate(['pages/loan/list']);
+   this.loan.loanCreate({
+    responsible : this.registerForm.value.responsible,
+    client : this.registerForm.value.client,
+    amount : this.registerForm.value.amount,
+    percentage : this.registerForm.value.percentage,
+    repaymentFrequency : this.registerForm.value.repaymentFrequency,
+    loanDate : this.registerForm.value.loanDate,
+    repaymentEndDate: this.registerForm.value.repaymentEndDate,
+    benefitPaymentMethod : this.registerForm.value.benefitPaymentMethod,
+    capitalPaymentMethod : this.registerForm.value.capitalPayementMethod,
+    remark : this.registerForm.value.remark
+   }).subscribe(data=>console.log(data))
   }
 }
 

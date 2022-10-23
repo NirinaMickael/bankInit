@@ -6,6 +6,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NotFoundComponent } from '../../shared/pages/not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoanService } from 'src/app/core/services/loan.service';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoanCreateComponent,
     LoanListComponent,
     NotFoundComponent
-  ]
+  ],
+  providers: [LoanService]
 })
 export class LoanModule { }
