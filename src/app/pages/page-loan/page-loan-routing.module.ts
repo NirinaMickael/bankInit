@@ -1,3 +1,4 @@
+import { CalendrierComponent } from './../../features/calendrier/calendrier.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoanCreateComponent } from 'src/app/features/loan/loan-create/loan-create.component';
@@ -12,6 +13,10 @@ const routes: Routes = [
        {
          path:"list",
          component:LoanListComponent
+       },
+       {
+          path:"calendrier",
+          component:CalendrierComponent
        },
        {
          path:"**",

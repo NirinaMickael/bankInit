@@ -8,7 +8,7 @@
         <a routerLink="loan/*" [ngClass]="{'activeLink':routeActive=='Dashboard'}">Dashboard</a>
         <a routerLink="loan/list"  (click)="handleclick($event)" [ngClass]="{'activeLink':routeActive=='Liste de prêts'}">Liste de prêts</a>
         <a routerLink="loan/create"(click)="handleclick($event)" [ngClass]="{'activeLink':routeActive=='Enregistrer un nouveau prêt'}">Enregistrer un nouveau prêt</a>
-        <a routerLink="loan/*" [ngClass]="{'activeLink':routeActive=='Calendrier de remboursement'}">Calendrier de remboursement</a>
+        <a routerLink="loan/calendrier" [ngClass]="{'activeLink':routeActive=='Calendrier de remboursement'}">Calendrier de remboursement</a>
     </nav>
 </div>    
 
